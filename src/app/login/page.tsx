@@ -3,36 +3,38 @@ import {
   Flex,
   Box,
   Heading, 
-  Stack,
+  VStack,
   Highlight,
   Text,
   Input,
   InputGroup,
-  Button
+  Button,
+  Image 
 } from "@chakra-ui/react";
 
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   return (
-    <Container h="90vh" p={5}>
-      <Stack>
-        <Heading size="3xl" letterSpacing="tight">
-          <Highlight query="with speed" styles={{ color: "teal.600" }}>
-            Create accessible React apps with speed
+    <Container h="90vh" p={5}>purple <VStack>
+        <Image 
+          boxSize="400px"
+          src="/happygirl.gif"/>
+        <Heading textAlign="center" size="3xl" letterSpacing="tight">
+          <Highlight query="inner landscape" styles={{ color: "purple.600" }}>
+            Discover your inner landscape
           </Highlight>
         </Heading>
-        <Text fontSize="md" color="fg.muted">
-          Chakra UI is a simple, modular and accessible component library that
-          gives you the building blocks you need.
+        <Text textAlign="center" fontSize="md" color="fg.muted">
+          AI-guided psychological insights through conversational assessments. Scientifically grounded, beautifully presented, deeply personal.
         </Text>
       <Flex p={10} gap="4" alignItems = 'center' justify="center">
 
-      <Button>
+      <Button  variant="outline">
         <FcGoogle/> Continue with Google
       </Button>
       </Flex>
-      </Stack>
+      </VStack>
     </Container>
   )
 }
