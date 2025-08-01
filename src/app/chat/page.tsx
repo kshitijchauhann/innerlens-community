@@ -8,7 +8,8 @@ import {
   Text,
   Input,
   InputGroup,
-  Button
+  Button,
+  HStack
 } from "@chakra-ui/react";
 
 import { FcFile } from "react-icons/fc";
@@ -34,14 +35,14 @@ const Chat = () => {
     </Stack>
         </Box>
 
-<InputGroup endAddon={<FcNext />}>
-  <Box w="100%" borderWidth="1px" borderColor="border.disabled">
-    <Input h="100px" placeholder="Enter..." />
-    <Flex gap="2">
-      <Button order="1"> <FcSelfie/> Find people</Button>
-      <Button order="2"> <FcFile/> Reports</Button>
-    </Flex>
-  </Box>
+<InputGroup>
+    <HStack h="70px" w="100%">
+    <Input placeholder="Enter..." />
+      <Button><FcNext/></Button>
+      <Button> <FcSelfie/></Button>
+      <Button> <FcFile/> </Button>
+              </HStack>
+    
 </InputGroup>
       
   </Flex>

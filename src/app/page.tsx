@@ -164,6 +164,10 @@ const SideBar = () => {
                   <Button w="100%">
                     <FcVoicePresentation/> Friend Requests
                   </Button>
+                  <Button w="100%">
+                    <FcVoicePresentation/> Tests
+                  </Button>
+
                 </VStack>
               </Drawer.Body>
               <Drawer.Footer>

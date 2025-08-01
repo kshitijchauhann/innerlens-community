@@ -3,15 +3,20 @@ import {
   Card, 
   Image, 
   Text,
-  HStack
+  Flex,
+  HStack,
+  Heading
 } from "@chakra-ui/react"
 
-const Reports = () => {
+const Tests = () => {
   return (
-    <HStack>
+    <Flex h="90vh" direction="column" alignItems="center" justify="center">     
+      <Heading>Tests</Heading>
+    <HStack gap="30px">
     <BigFiveCard/>
     <AttachmentStyle/>
-    </HStack>
+      </HStack>
+    </Flex>
   ) 
 }
 
@@ -71,4 +76,4 @@ const AttachmentStyle = () => {
   )
 }
 
-export default Reports
+export default Tests
