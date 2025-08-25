@@ -24,7 +24,6 @@ const Pricing = () => {
 const LifeTimePricingCard = () => {
   return (
 <Card.Root maxW="sm" overflow="hidden">
-      <Image src="/lifetime.gif" alt="LifeTime"/>
       <Card.Body>
         <Card.Title marginTop="10px" textAlign="center">
           Life Time
@@ -63,7 +62,6 @@ const MonthyPricingCard = () => {
   return (
     <Card.Root maxW="sm" overflow="hidden">
 
-      <Image src="/pro.gif" alt="Pro"/>
       <Card.Body>
         <Card.Title marginTop="10px" textAlign="center">
           Pro Plan
@@ -101,7 +99,6 @@ const MonthyPricingCard = () => {
 const BasicPricingCard = () => {
   return (
     <Card.Root maxW="sm" overflow="hidden">
-      <Image src="/basic.gif" alt="basic"/>
       <Card.Body>
         <Card.Title marginTop="10px" textAlign="center">
           Basic Plan

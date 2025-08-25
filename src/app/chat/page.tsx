@@ -9,45 +9,79 @@ import {
   Input,
   InputGroup,
   Button,
-  HStack
+  HStack,
+  Avatar,
+  Circle, 
+  Float,
+  VStack
 } from "@chakra-ui/react";
 
 import { FcFile } from "react-icons/fc";
 import { FcSelfie } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
 
+
+import { IoIosArrowRoundBack } from "react-icons/io";
+
 const Chat = () => {
   return (
-    <Container h="100vh" p={4}>
-      <Flex direction="column" h="100%">
-        {/* Chat messages placeholder */}
-        <Box flex="1" overflowY="auto">
-          <Stack>
-      <Heading size="3xl" letterSpacing="tight">
-        <Highlight query="with speed" styles={{ color: "teal.600" }}>
-          Create accessible React apps with speed
-        </Highlight>
-      </Heading>
-      <Text fontSize="md" color="fg.muted">
-        Chakra UI is a simple, modular and accessible component library that
-        gives you the building blocks you need.
-      </Text>
-    </Stack>
-        </Box>
-
-<InputGroup>
-    <HStack h="70px" w="100%">
-    <Input placeholder="Enter..." />
-      <Button><FcNext/></Button>
-      <Button> <FcSelfie/></Button>
-      <Button> <FcFile/> </Button>
-              </HStack>
-    
-</InputGroup>
-      
+  <Flex direction="column">
   </Flex>
-    </Container>
+  )
+}
+
+
+
+const ChatList = () => {
+  return (
+      <Flex direction="column">
+      <Flex align="center" shadow="sm" h="40px" w="100%">
+          <IoIosArrowRoundBack/>
+
+        </Flex>
+  <Flex margin="10px" justify="flex-start">
+    <Stack marginLeft="10px" gap="8">
+      {users.map((user) => (
+        <HStack key={user.email} gap="4">
+          <Avatar.Root>
+            <Avatar.Fallback name={user.name} />
+            <Avatar.Image src={user.avatar} />
+            <Float placement="bottom-end" offsetX="1" offsetY="1">
+              <Circle
+                bg="green.500"
+                size="8px"
+                outline="0.2em solid"
+                outlineColor="bg"
+              />
+            </Float>
+          </Avatar.Root>
+          <Stack gap="0">
+            <Text fontWeight="medium">{user.name}</Text>
+            <Text color="fg.muted" textStyle="sm">
+              {user.email}
+            </Text>
+          </Stack>
+        </HStack>
+      ))}
+    </Stack>
+        </Flex>
+    </Flex>
+
   );
 };
 
+const users = [
+  {
+    id: "1",
+    name: "John Mason",
+    email: "john.mason@example.com",
+    avatar: "https://i.pravatar.cc/300?u=iu",
+  },
+  {
+    id: "2",
+    name: "Melissa Jones",
+    email: "melissa.jones@example.com",
+    avatar: "https://i.pravatar.cc/300?u=po",
+  },
+]
 export default Chat;
